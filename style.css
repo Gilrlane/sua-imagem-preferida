@@ -6,17 +6,20 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif; /* Fonte padrão para todo o site */
+   font-family: "Bungee Tint", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 header, main, footer {
     padding: 20px;
 }
 
+
 .meu-texto {
     font-size: 36px;
-    text-shadow: 2px 2px 4px #1d1c1c;
-    color: white; /* Adiciona cor ao texto para garantir legibilidade sobre a imagem de fundo */
+    text-shadow: 2px 2px 4px #f1dcdc;
+    color: rgb(87, 6, 6); /* Adiciona cor ao texto para garantir legibilidade sobre a imagem de fundo */
 }
 
 #resultados img {

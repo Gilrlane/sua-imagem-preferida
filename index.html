@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imagens de lugares turísticos do Brasil.</title>
@@ -14,15 +15,14 @@
     <main>
         <p class="meu-texto">Imagens de lugares turísticos do Brasil.</p>
         <input type="text" id="inputLugar" placeholder="Ex.: Lençóis Maranhenses">
-        <button onclick="buscarImagens()">Buscar</button>
+        <button id="searchButton">Buscar</button>
     </main>
 
     <div id="resultados"></div>
 
     <footer>
         <p>Imagens Turísticas do Brasil. Direitos Reservados.</p>
-        <p>2024<p>
-             
+        <p>2024</p>
     </footer>
 
     <script>
@@ -55,6 +55,21 @@
                     resultadosDiv.innerHTML = '<p>Desculpe, não conseguimos encontrar imagens. Tente novamente.</p>';
                 });
         }
+
+        // Adiciona o evento para acionar a busca ao pressionar Enter
+        document.addEventListener('DOMContentLoaded', function () {
+            const input = document.getElementById('inputLugar');
+            const button = document.getElementById('searchButton');
+
+            input.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault(); // Evita o comportamento padrão do Enter
+                    buscarImagens(); // Chama a função de busca
+                }
+            });
+
+            button.addEventListener('click', buscarImagens);
+        });
     </script>
 </body>
 </html>
