@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens de lugares turísticos do Brasil</title>
+</head>
+<body>
+    <header>
+        <p class="meu-texto">Conheça o Brasil!</p>
+    </header>
+
+    <main>
+        <p class="meu-texto">Imagens de lugares turísticos do Brasil</p>
+        <input type="text" id="inputLugar" placeholder="Ex.: Lençóis Maranhenses">
+        <button onclick="buscarImagens()">Buscar</button>
+    </main>
+
+    <div id="resultados"></div>
+
+    <footer>
+        <p>Imagens Turísticas do Brasil. Direitos Reservados.</p>
+        <p>2024<p>
+             
+    </footer>
+
+    <script>
+        function buscarImagens() {
+            const lugar = document.getElementById('inputLugar').value;
+            const resultadosDiv = document.getElementById('resultados');
+
+            const apiKey = 'AIzaSyDOkGGpkN5_SjzE01HHXCJrY9haKXcOk-4'; // Sua chave de API
+            const searchEngineId = '55cc2cbc59a8c448a'; // Seu ID do mecanismo de busca
+
+            const url = `https://www.googleapis.com/customsearch/v1?q=${lugar}&cx=${searchEngineId}&searchType=image&key=${apiKey}`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    resultadosDiv.innerHTML = '';
+                    if (data.items && data.items.length > 0) {
+                        data.items.forEach(item => {
+                            const img = document.createElement('img');
+                            img.src = item.link;
+                            img.alt = item.title;
+                            resultadosDiv.appendChild(img);
+                        });
+                    } else {
+                        resultadosDiv.innerHTML = '<p>Nenhuma imagem encontrada. Tente outro termo de busca.</p>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro ao buscar imagens:', error);
+                    resultadosDiv.innerHTML = '<p>Desculpe, não conseguimos encontrar imagens. Tente novamente.</p>';
+                });
+        }
+    </script>
+</body>
+</html>

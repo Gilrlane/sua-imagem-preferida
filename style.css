@@ -1,0 +1,26 @@
+body {
+    background-image: url('images/brasil.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Fonte padrão para todo o site */
+}
+
+header, main, footer {
+    padding: 20px;
+}
+
+.meu-texto {
+    font-size: 36px;
+    text-shadow: 2px 2px 4px #d52e2e;
+    color: white; /* Adiciona cor ao texto para garantir legibilidade sobre a imagem de fundo */
+}
+
+#resultados img {
+    width: 200px; /* Ajuste o tamanho das imagens conforme necessário */
+    margin: 10px;
+    border-radius: 8px; /* Adiciona bordas arredondadas às imagens */
+}
