@@ -20,14 +20,14 @@ header {
 
 
 .meu-texto {
-    text-shadow: 2px 2px 4px #87d51a;
-    font-size: 24px;
+    text-shadow: 2px 4px 6px #87d51a;
+    font-size: 45px;
 }
 
 
 main {
     flex: 1; /* Faz o main ocupar o espaço restante */
-    padding: 20px; /* Adiciona espaço ao redor do conteúdo */
+    padding: 40px; /* Adiciona espaço ao redor do conteúdo */
 }
 
 /* Estilo para o rodapé */
@@ -43,8 +43,36 @@ footer {
 
 /* Estilo para as imagens */
 #resultados img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 10px auto;
+    max-width: 10%;
+    height:min-content;
+    display: 1;
+    margin: 2px 
+}
+/* Estilo para a caixa de pesquisa */
+#inputLugar {
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 600px; /* Define um tamanho máximo */
+    padding: 10px; /* Adiciona espaçamento interno */
+    font-size: 18px; /* Define o tamanho da fonte */
+    border: 2px solid #333; /* Define a borda */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    margin-bottom: 10px; /* Adiciona espaço abaixo da caixa de pesquisa */
+}
+
+/* Estilo para o botão de pesquisa */
+#searchButton {
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 200px; /* Define um tamanho máximo */
+    padding: 10px; /* Adiciona espaçamento interno */
+    font-size: 18px; /* Define o tamanho da fonte */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    background-color: #87d51a; /* Define a cor de fundo */
+    color: #fff; /* Define a cor do texto */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar sobre o botão */
+    transition: background-color 0.3s; /* Adiciona uma transição suave para a cor de fundo */
+}
+
+#searchButton:hover {
+    background-color: #6fb829; /* Muda a cor de fundo ao passar o mouse sobre o botão */
 }
