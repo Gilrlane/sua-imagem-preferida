@@ -43,10 +43,10 @@ footer {
 
 /* Estilo para as imagens */
 #resultados img {
-    max-width: 10%;
+    max-width: 20%;
     height:min-content;
     display: 1;
-    margin: 2px 
+    margin: 6px 
 }
 /* Estilo para a caixa de pesquisa */
 #inputLugar {
