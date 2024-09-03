@@ -1,3 +1,4 @@
+/* Define o estilo básico para o corpo da página */
 body {
     background-image: url('images/brasil.jpeg');
     background-repeat: no-repeat;
@@ -6,24 +7,44 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-   font-family: "Bungee Tint", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    font-family: 'Bungee Tint', cursive; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
 }
 
-header, main, footer {
-    padding: 20px;
+
+header {
+    margin-bottom: 20px; 
 }
 
 
 .meu-texto {
-    font-size: 36px;
-    text-shadow: 2px 2px 4px #f1dcdc;
-    color: rgb(87, 6, 6); /* Adiciona cor ao texto para garantir legibilidade sobre a imagem de fundo */
+    text-shadow: 2px 2px 4px #87d51a;
+    font-size: 24px;
 }
 
+
+main {
+    flex: 1; /* Faz o main ocupar o espaço restante */
+    padding: 20px; /* Adiciona espaço ao redor do conteúdo */
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #ddf227; /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto */
+    text-align: center;
+    padding: 2px;
+    position: relative;
+    bottom: 0;
+    width: 100%; /* Garante que o rodapé ocupe toda a largura da página */
+}
+
+/* Estilo para as imagens */
 #resultados img {
-    width: 200px; /* Ajuste o tamanho das imagens conforme necessário */
-    margin: 10px;
-    border-radius: 8px; /* Adiciona bordas arredondadas às imagens */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
 }
