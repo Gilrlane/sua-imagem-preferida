@@ -20,7 +20,7 @@ header {
 
 
 .meu-texto {
-    text-shadow: 2px 4px 6px #87d51a;
+    text-shadow: 2px 4px 6px #88df0d;
     font-size: 45px;
 }
 
@@ -32,20 +32,21 @@ main {
 
 /* Estilo para o rodapé */
 footer {
-    background-color: #ddf227; /* Cor de fundo do rodapé */
-    color: #fff; /* Cor do texto */
+    text-shadow: 2px 4px 6px #88df0d;
+    font-size: 20px;
+    color: #f4efef; /* Cor do texto */
     text-align: center;
-    padding: 2px;
-    position: relative;
-    bottom: 0;
+    padding: 000,1px;
+    position:static;
+    bottom: 0,01;
     width: 100%; /* Garante que o rodapé ocupe toda a largura da página */
 }
 
 /* Estilo para as imagens */
 #resultados img {
-    max-width: 20%;
+    max-width: 10%;
     height:min-content;
-    display: 1;
+    display: 20;
     margin: 6px 
 }
 /* Estilo para a caixa de pesquisa */
@@ -55,7 +56,7 @@ footer {
     padding: 10px; /* Adiciona espaçamento interno */
     font-size: 18px; /* Define o tamanho da fonte */
     border: 2px solid #333; /* Define a borda */
-    border-radius: 5px; /* Adiciona bordas arredondadas */
+    border-radius: 50px; /* Adiciona bordas arredondadas */
     margin-bottom: 10px; /* Adiciona espaço abaixo da caixa de pesquisa */
 }
 
@@ -66,7 +67,7 @@ footer {
     padding: 10px; /* Adiciona espaçamento interno */
     font-size: 18px; /* Define o tamanho da fonte */
     border: none; /* Remove a borda padrão */
-    border-radius: 5px; /* Adiciona bordas arredondadas */
+    border-radius: 50px; /* Adiciona bordas arredondadas */
     background-color: #87d51a; /* Define a cor de fundo */
     color: #fff; /* Define a cor do texto */
     cursor: pointer; /* Muda o cursor para uma mão ao passar sobre o botão */
